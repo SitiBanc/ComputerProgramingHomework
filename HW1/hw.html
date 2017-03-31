@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<script>
+		var t=new Date();
+		var y=t.getFullYear();
+		var m=t.getMonth()+1;
+		var d1=t.getDate();
+		var d2=t.getDay();
+		
+		function f()
+		{
+		var s="<h2 align='center'>" + y + "年" + m + "月</h2>";
+		s+="<h1 align='center'>" + d1 + "</h1>";
+		s+="<p align='center'>星期" + d2 + "</p>";
+		
+		document.getElementById("aa").innerHTML=s;
+		}
+		
+		function f1()
+		{
+		d1+=1;
+		d2+=1;
+		var s1="<h2 align='center'>" + y + "年" + m + "月</h2>";
+		s1+="<h1 align='center'>" + d1 + "</h1>";
+		s1+="<p align='center'>星期" + d2 + "</p>";
+		
+		document.getElementById("aa").innerHTML=s1
+		}
+		
+		function f2()
+		{
+		d1-=1;
+		d2-=1;
+		var s2="<h2 align='center'>" + y + "年" + m + "月</h2>";
+		s2+="<h1 align='center'>" + d1 + "</h1>";
+		s2+="<p align='center'>星期" + d2 + "</p>";
+		
+		document.getElementById("aa").innerHTML=s2
+		}
+		
+		</script>
+	</head>
+	<body>
+		<div id="aa">
+		</div>
+		<script>f();</script>
+		<div id="bb" align='right'>
+		<a href="javascript:f1();">明天</a>
+		</div>
+		<div id="cc" align='left'>
+		<a href="javascript:f2();">昨天</a>
+		</div>
+	</body>
+</html>
